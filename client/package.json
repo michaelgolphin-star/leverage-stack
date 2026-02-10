@@ -1,0 +1,8 @@
+
+{
+  "name": "leverage-stack-client",
+  "private": true,
+  "scripts": {
+    "dev": "vite"
+  }
+}

@@ -1,0 +1,11 @@
+
+{
+  "name": "leverage-stack",
+  "private": true,
+  "workspaces": ["client", "server"],
+  "scripts": {
+    "install:all": "npm -w server install && npm -w client install",
+    "dev": "npm -w server run dev",
+    "build": "npm -w client run build && npm -w server run build"
+  }
+}
