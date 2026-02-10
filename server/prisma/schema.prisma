@@ -18,6 +18,7 @@ model Org {
   name      String
   createdAt DateTime @default(now())
   users     User[]
+  plans     OrgPlan[]
 }
 
 model User {
@@ -30,4 +31,15 @@ model User {
   org          Org      @relation(fields: [orgId], references: [id])
 
   @@unique([orgId, username])
+}
+
+model OrgPlan {
+  id        String   @id @default(cuid())
+  orgId     String
+  planCode  String
+  status    String
+  createdAt DateTime @default(now())
+  org       Org      @relation(fields: [orgId], references: [id])
+
+  @@index([orgId])
 }
