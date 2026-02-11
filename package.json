@@ -1,4 +1,3 @@
-
 {
   "name": "leverage-stack",
   "private": true,
@@ -6,6 +5,9 @@
   "scripts": {
     "install:all": "npm -w server install && npm -w client install",
     "dev": "npm -w server run dev",
-    "build": "npm -w client run build && npm -w server run build"
+    "build": "npm -w client run build && npm -w server run build",
+    "start": "npm -w server run start",
+    "db:migrate": "npm -w server run db:migrate",
+    "db:seed": "npm -w server run db:seed"
   }
 }
